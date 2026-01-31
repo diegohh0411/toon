@@ -1,6 +1,6 @@
 {
-  "name": "toonify-n8n-node",
-  "version": "1.0.0",
+  "name": "n8n-nodes-toonify",
+  "version": "1.0.1",
   "description": "n8n node to convert JSON to TOON format for reduced LLM token usage",
   "license": "MIT",
   "author": { "name": "Diego" },
