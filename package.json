@@ -1,0 +1,31 @@
+{
+  "name": "toonify-n8n-node",
+  "version": "1.0.0",
+  "description": "n8n node to convert JSON to TOON format for reduced LLM token usage",
+  "license": "MIT",
+  "author": { "name": "Diego" },
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "nodes": ["dist/nodes/ToToon/ToToon.node.js"]
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "@toon-format/toon": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "n8n-workflow": "^1.0.0",
+    "typescript": "^5.0.0"
+  },
+  "overrides": {
+    "form-data": "^4.0.5",
+    "lodash": "^4.17.23"
+  }
+}
