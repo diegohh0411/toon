@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-toonify",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "n8n node to convert JSON to TOON format for reduced LLM token usage",
   "license": "MIT",
   "author": { "name": "Diego" },
@@ -11,10 +11,18 @@
     "n8nNodesApiVersion": 1,
     "nodes": ["dist/nodes/ToToon/ToToon.node.js"]
   },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.svg",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node -e \"require('fs').cpSync('nodes/ToToon/toon.svg','dist/nodes/ToToon/toon.svg')\"",
     "dev": "tsc --watch",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@toon-format/toon": "^2.1.0"
